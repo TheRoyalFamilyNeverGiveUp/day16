@@ -3,7 +3,29 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>个人简历</title>
-	<link rel="stylesheet" type="text/css" href="css/style_3.css"/>
+	<style type="text/css">
+		.style-box {
+			width: 150px;
+			border-radius: 5px;
+			display: flex;
+			justify-content: space-around;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+		.style-box div {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			color: #ffffff;
+			cursor: pointer;
+			border-radius: 50%;
+			background-color: skyblue;
+			box-sizing: border-box;
+		}
+	</style>
+	<link id="link-txt" rel="stylesheet" type="text/css" href="css/style_3.css"/>
 </head>
 <body>
 	<div class="sidebar">
@@ -79,12 +101,35 @@
 		</div>
 	</div>
 	<div class="fixclear"></div>
-	
+	<div class="style-box">
+		<div id="style1-btn">1</div>
+		<div id="style2-btn">2</div>
+		<div id="style3-btn">3</div>
+	</div>
 	<script type="text/javascript">
 		var oBtn = document.getElementById("mail-btn");
+		var oSty1 = document.getElementById("style1-btn");
+		var oSty2 = document.getElementById("style2-btn");
+		var oSty3 = document.getElementById("style3-btn");
+		var oLink = document.getElementById("link-txt");
 		
 		oBtn.onclick = function() {
 			alert("12345678@163.com");
+		}
+		oSty1.onclick = function() {
+			if(oLink.href.match !== "style_1"){
+				oLink.href = "css/style_1.css"
+			}
+		}
+		oSty2.onclick = function() {
+			if(oLink.href.match !== "style_2"){
+				oLink.href = "css/style_2.css"
+			}
+		}
+		oSty3.onclick = function() {
+			if(oLink.href.match !== "style_3"){
+				oLink.href = "css/style_3.css"
+			}
 		}
 	</script>
 </body>
